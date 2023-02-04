@@ -15,7 +15,7 @@ public class animationcontrollerscript : MonoBehaviour
     private bool running;
     private bool isJumping;
     private float horizontalinput;
-    private int spaceCount=0;
+    private int spaceCount=-50;
     public GameObject gameObject;
       public float jumpforce = 5f;
        public bool IsGrounded;
@@ -51,6 +51,21 @@ public bool sp=true;
             {
                 running=true;
                 myAnim.SetBool("isrunning",true); isJumping=false;
+
+                 if(Input.GetKeyDown(KeyCode.Space)&&rigidbdy.velocity.y==0)
+                 {
+                    rigidbdy.AddForce(Vector3.up * 300f);
+                    myAnim.SetBool("isjumping",true);
+                    // myAnim.SetBool("isjumping",true);
+                     running=false;
+            myAnim.SetBool("isrunning",false);
+            isJumping=false;
+                    // isJumping=true;
+                 }
+                 else
+                 {   running=true;
+                      myAnim.SetBool("isrunning",true); isJumping=false;
+                 }
             }
         }
         else if (running)
@@ -61,7 +76,17 @@ public bool sp=true;
 
             
         }
-        if(Input.GetKeyDown(KeyCode.Space))
+   if(Input.GetKey(KeyCode.Space))
+   {
+    spaceCount++;
+    Debug.Log(spaceCount);
+   }
+   if(spaceCount>50)
+   {
+      myAnim.SetBool("isjumping",false);
+   }
+
+        if(Input.GetKeyDown(KeyCode.Space)&&rigidbdy.velocity.y==0)
         {
                     rigidbdy.AddForce(Vector3.up * 300f);
                     myAnim.SetBool("isjumping",true);
@@ -82,6 +107,7 @@ public bool sp=true;
                     running=false;
                     myAnim.SetBool("isrunning",false);
                     Debug.Log("fall" +spaceCount);
+                    spaceCount=0;
                 
         }
         // else{
@@ -89,7 +115,7 @@ public bool sp=true;
 
         // }
             // isJumping=false;
-    //     void OnCollisionEnter2D(Collision2D col)
+    //     void OnCollisionEnter2D(Collision col)
     //    {
     //     if(col.gameObject.CompareTag("Ground"))
 

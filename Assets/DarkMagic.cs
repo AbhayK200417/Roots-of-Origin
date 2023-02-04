@@ -5,6 +5,7 @@ using UnityEngine;
 public class DarkMagic : MonoBehaviour
 {
     public GameObject foam;
+    public static GameObject instFoam;
     public float speed = 50f;
     public Transform target;
     public float radi =10f;
@@ -70,7 +71,7 @@ public class DarkMagic : MonoBehaviour
 
             
         Debug.Log("working");
-            GameObject instFoam = Instantiate(foam, transform.position, Quaternion.identity);
+           instFoam = Instantiate(foam, transform.position, Quaternion.identity);
             Rigidbody instFoamRB = instFoam.GetComponent<Rigidbody>();
             // instFoam.transform.position += Vector3.right * Time.deltaTime * speed;
             //transform.position = Vector3.MoveTowards(instFoam.transform.position, target.position, 5f);
@@ -79,6 +80,10 @@ public class DarkMagic : MonoBehaviour
             Destroy(instFoam, 3f);
      
         
+    }
+    public static void DestroyFoam(GameObject instFoam)
+    {
+           Destroy(instFoam);
     }
     
 }
