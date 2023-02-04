@@ -15,11 +15,11 @@ public class animationcontrollerscript : MonoBehaviour
     private bool running;
     private bool isJumping;
     private float horizontalinput;
-    private int spaceCount;
+    private int spaceCount=0;
     public GameObject gameObject;
-      public float jumpforce = 2f;
+      public float jumpforce = 5f;
        public bool IsGrounded;
-
+public bool sp=true;
 
    
     // Start is called before the first frame update
@@ -39,7 +39,7 @@ public class animationcontrollerscript : MonoBehaviour
 
         // myAnim.SetBool("isrunning",isrunning);
         // myAnim.SetBool("isjumping",isJumping);
-
+        
 
 
         horizontalinput=Input.GetAxis("Horizontal");
@@ -50,23 +50,84 @@ public class animationcontrollerscript : MonoBehaviour
             if(!running)
             {
                 running=true;
-                myAnim.SetBool("isrunning",true);
+                myAnim.SetBool("isrunning",true); isJumping=false;
             }
         }
         else if (running)
         {
             running=false;
             myAnim.SetBool("isrunning",false);
+            isJumping=false;
+
             
         }
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-                rigidbdy.AddForce(Vector3.up * jumpforce);
-                myAnim.SetBool("isjumping",true);
+                    rigidbdy.AddForce(Vector3.up * 300f);
+                    myAnim.SetBool("isjumping",true);
+                    // myAnim.SetBool("isjumping",true);
+                    isJumping=true;
+                    Debug.Log("jump" + spaceCount);
+                
+                
+                
         }
-        else{
-            myAnim.SetBool("isjumping",false);
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+                // rigidbdy.AddForce(Vector3.up * 100f);
+                // myAnim.SetBool("isjumping",true);
+               
+                    myAnim.SetBool("isjumping",false);
+                    isJumping=false;
+                    running=false;
+                    myAnim.SetBool("isrunning",false);
+                    Debug.Log("fall" +spaceCount);
+                
         }
+        // else{
+        //     myAnim.SetBool("isjumping",false);
+
+        // }
+            // isJumping=false;
+    //     void OnCollisionEnter2D(Collision2D col)
+    //    {
+    //     if(col.gameObject.CompareTag("Ground"))
+
+    //     {
+    //         isJumping=false;
+    //     }
+    //    }
+    //     void OnCollisionExit2D(Collision2D col)
+    //    {
+    //     if(col.gameObject.CompareTag("Ground"))
+
+    //     {
+    //         isJumping=true;
+    //     }
+    //    }
+ if (Input.GetKeyUp(KeyCode.S))
+     {
+        myAnim.SetBool("OnSpell",false);
+     }
+ if (Input.GetKeyDown(KeyCode.S))
+     {
+        myAnim.SetBool("OnSpell",true);
+     }
+
+
+
+//  if (Input.GetKeyUp(KeyCode.Space))
+//      {
+//         myAnim.SetBool("isjumping",false);
+//         sp=true;
+//      }
+//  if (Input.GetKeyDown(KeyCode.Space)&&sp)
+//      {
+//  myAnim.SetBool("isjumping",true);
+//  sp=false;                                  
+//      }
+ 
+   
         
         // if (Input.GetKey("right"))
         // {
