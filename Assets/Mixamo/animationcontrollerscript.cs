@@ -15,8 +15,10 @@ public class animationcontrollerscript : MonoBehaviour
     private bool running;
     private bool isJumping;
     private float horizontalinput;
+    private int spaceCount;
     public GameObject gameObject;
-      public float jumpforce = 1f;
+      public float jumpforce = 2f;
+       public bool IsGrounded;
 
 
    
@@ -55,28 +57,17 @@ public class animationcontrollerscript : MonoBehaviour
         {
             running=false;
             myAnim.SetBool("isrunning",false);
+            
         }
         if(Input.GetKey(KeyCode.Space))
         {
-             myAnim.SetBool("isjumping",true);
-            //  if (Input.GetKeyDown(KeyCode.Space))
-            {
                 rigidbdy.AddForce(Vector3.up * jumpforce);
-                
-            }
-             
-        }else{
-             myAnim.SetBool("isjumping",false);
+                myAnim.SetBool("isjumping",true);
         }
-
-
-
-
-
-
-
-
-
+        else{
+            myAnim.SetBool("isjumping",false);
+        }
+        
         // if (Input.GetKey("right"))
         // {
         //    myAnimo.SetBool("isrunning",true);
@@ -94,4 +85,5 @@ public class animationcontrollerscript : MonoBehaviour
         // }
 
     }
+   
 }
