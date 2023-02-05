@@ -46,7 +46,7 @@ public bool sp=true;
         if(Mathf.Abs(horizontalinput)>0.01f)
         {
             transform.rotation=Quaternion.LookRotation(new Vector3(horizontalinput,0f,0f));
-            rigidbdy.MovePosition(rigidbdy.position+transform.forward*Speed*0.01f);
+            rigidbdy.MovePosition(rigidbdy.position+transform.forward*Speed*Time.deltaTime);
             if(!running)
             {
                 running=true;
