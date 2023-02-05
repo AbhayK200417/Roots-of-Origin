@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182.44293, y: 110.45328}
-  m_SizeDelta: {x: 545.4073, y: 140.2933}
+  m_AnchoredPosition: {x: 170, y: 89.715}
+  m_SizeDelta: {x: 520.5214, y: 181.7699}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &105556199
 MonoBehaviour:
@@ -181,10 +181,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In the depths of the earth, I am born\nIn the light of the sun, I am formed\nWith
-    a flicker, I dance and I sing\nIn the hands of a wizard, I bring\n\nThe might
-    of a dragon, the heat of the sun\nA flame so bright, it can never be outdone\nWhat
-    am I, that can warm and consume?\nThe answer, my friend, is a fiery\_room."
+  m_text: I am clear like glass, but can be broken easily. I can be melted by the
+    sun or by your touch. What am I?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -211,8 +209,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.2
-  m_fontSizeBase: 28.2
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -747,7 +745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 406, y: -142}
+  m_AnchoredPosition: {x: 188, y: 33}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695434050
@@ -814,7 +812,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2140868593}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: AnswerString
+        m_MethodName: AnswerIce
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1262,7 +1260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dbdee7db90c19984997744362b0607df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f05148b519eda28429e44c78526902f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

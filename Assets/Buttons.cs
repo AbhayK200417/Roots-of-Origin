@@ -34,6 +34,26 @@ public class Buttons : MonoBehaviour
    }
 
 }
+    public void AnswerIce(string s1)
+{
+ 
+   
+   if (s1=="WATER"||s1=="Water"||s1=="water")
+   {
+        SceneManager.LoadScene("s1");
+   }
+
+}
+    public void AnswerWind(string s1)
+{
+ 
+   
+   if (s1=="Wind"||s1=="wind"||s1=="WIND")
+   {
+        SceneManager.LoadScene("s1");
+   }
+
+}
 
 
 

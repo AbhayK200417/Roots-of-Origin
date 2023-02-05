@@ -21,19 +21,19 @@ void Start()
     {
  if(collision.gameObject.tag == "NightGate")
  {
-
+     SceneManager.LoadScene("Scenes/DesertScene");
  }
  if(collision.gameObject.tag == "DesertGate")
  {
-
+ SceneManager.LoadScene("Scenes/IceScene");
  }
  if(collision.gameObject.tag == "IceGate")
  {
-
+    SceneManager.LoadScene("Scenes/IceScene");
  }
  if(collision.gameObject.tag == "ForestGate")
  {
-
+ SceneManager.LoadScene("Scenes/Forest Scene");
  }
 
 
