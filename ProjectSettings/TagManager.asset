@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Ground
   - enemy
+  - Enemy
+  - NightGate
+  - DesertGate
+  - IceGate
+  - ForestGate
   layers:
   - Default
   - TransparentFX
