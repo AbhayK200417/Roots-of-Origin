@@ -17,7 +17,7 @@ public class animationcontrollerscript : MonoBehaviour
     private float horizontalinput;
     private int spaceCount=-50;
     public GameObject gameObject;
-      public float jumpforce = 5f;
+      public float jumpforce = 300f;
        public bool IsGrounded;
 public bool sp=true;
 
@@ -54,7 +54,7 @@ public bool sp=true;
 
                  if(Input.GetKeyDown(KeyCode.Space)&&rigidbdy.velocity.y==0)
                  {
-                    rigidbdy.AddForce(Vector3.up * 300f);
+                    rigidbdy.AddForce(Vector3.up * jumpforce);
                     myAnim.SetBool("isjumping",true);
                     // myAnim.SetBool("isjumping",true);
                      running=false;
@@ -88,7 +88,7 @@ public bool sp=true;
 
         if(Input.GetKeyDown(KeyCode.Space)&&rigidbdy.velocity.y==0)
         {
-                    rigidbdy.AddForce(Vector3.up * 300f);
+                    rigidbdy.AddForce(Vector3.up * jumpforce);
                     myAnim.SetBool("isjumping",true);
                     // myAnim.SetBool("isjumping",true);
                     isJumping=true;

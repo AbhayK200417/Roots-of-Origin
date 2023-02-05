@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/s1.unity
     guid: 544834829fefac0419610d8021998aa1
   - enabled: 1
-    path: Assets/NightScene.unity
+    path: Assets/Scenes/Story.unity
+    guid: 6bf63ca8a4f4f324f9cf41540a8ab1c6
+  - enabled: 1
+    path: Assets/Scenes/DesertScene.unity
     guid: c798c426f0143e74992a535e0f7adf95
   - enabled: 1
     path: Assets/CityLost.unity
@@ -23,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ForestLost.unity
     guid: 00e2853e1d6504b4fa6ce0dff229cb05
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 6f8dc21f25349c245909614e3f934a9a
   m_configObjects: {}
