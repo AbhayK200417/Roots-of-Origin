@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/IceLost.unity
     guid: c5613b5de1e740d45a349117fcfdc7b5
   - enabled: 1
-    path: Assets/NightScene.unity
+    path: Assets/Scenes/NightScene.unity
     guid: 6755f3c9d16d3f947b04e2e6902568d6
   - enabled: 1
     path: Assets/Scenes/IceScene.unity

@@ -11,7 +11,7 @@ public class animationcontrollerscript : MonoBehaviour
 {
     private Animator myAnim;
     private Rigidbody rigidbdy;
-    private static float Speed=3f;
+    private static float Speed=6f;
     private bool running;
     private bool isJumping;
     private float horizontalinput;

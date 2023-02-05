@@ -19,6 +19,7 @@ void Start()
 }
    void OnCollisionEnter(Collision collision)
     {
+        
  if(collision.gameObject.tag == "NightGate")
  {
      SceneManager.LoadScene("Scenes/DesertScene");
@@ -35,11 +36,31 @@ void Start()
  {
  SceneManager.LoadScene("Scenes/Forest Scene");
  }
+        if (collision.gameObject.tag == "Ded")
+        {
+            if (SceneManager.GetActiveScene().name == "NightScene")
+            {
+
+                SceneManager.LoadScene("CityLost");
+            }
+            else if (SceneManager.GetActiveScene().name == "Scenes/IceScene")
+            {
+                SceneManager.LoadScene("IceLost");
+            }
+            else if (SceneManager.GetActiveScene().name == "Scenes/Forest Scene")
+            {
+                SceneManager.LoadScene("ForestLost");
+            }
+            else if (SceneManager.GetActiveScene().name == "Scenes/DesertScene")
+            {
+                SceneManager.LoadScene("DesertLost");
+            }
+        }
 
 
 
 
-        if(collision.gameObject.tag == "enemy")
+        if (collision.gameObject.tag == "enemy")
         {
             health -= damage;
              healthbar.value= health;

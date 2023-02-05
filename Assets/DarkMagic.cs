@@ -10,7 +10,7 @@ public class DarkMagic : MonoBehaviour
     public Transform target;
     public float radi =10f;
     private Vector3 pos;
-    public float delay = 2f;
+    public float delay = 1f;
     float timer;
     public static bool righface = false;
     

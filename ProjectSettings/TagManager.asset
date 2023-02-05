@@ -11,6 +11,7 @@ TagManager:
   - DesertGate
   - IceGate
   - ForestGate
+  - Ded
   layers:
   - Default
   - TransparentFX
